@@ -69,7 +69,7 @@
   height: 700px;
   max-height: 900px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -427,6 +427,17 @@
   .onlineText {
     font-size: 1rem;
   }
+
+  .logoBannerWrapper {
+    top: 12px;
+  }
+
+  .logoBanner {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px;
+    max-height: 80px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -631,5 +642,117 @@
 
   100% {
     filter: drop-shadow(0 0 8px #19e05c);
+  }
+}
+
+.logoMobile {
+  display: block;
+  margin: 18px auto 18px auto;
+  width: 48px;
+  height: 48px;
+}
+
+.logoBannerWrapper {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 20;
+  pointer-events: none;
+}
+
+.logoBanner {
+  width: 80px !important;
+  height: 80px !important;
+  max-width: 80px;
+  max-height: 80px;
+  min-width: 40px;
+  min-height: 40px;
+  display: block;
+  pointer-events: auto;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  animation: pulseLogo 2.8s ease-in-out infinite;
+}
+
+@keyframes pulseLogo {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.08);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 700px) {
+  .logoBannerWrapper {
+    top: 12px;
+  }
+
+  .logoBanner {
+    width: 80px !important;
+    height: 80px !important;
+    max-width: 80px;
+    max-height: 80px;
+  }
+}
+
+.notify {
+  position: fixed;
+  bottom: 32px;
+  right: 24px;
+  background: rgba(24, 24, 24, 0.98);
+  color: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px #000a, 0 0 0 2px #ff7a0044;
+  padding: 10px 22px 10px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.08rem;
+  font-weight: 500;
+  z-index: 1000;
+  animation: notifyIn 0.4s cubic-bezier(.4, 1.6, .6, 1) both;
+}
+
+@keyframes notifyIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.notifyIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notifyText {
+  color: #fff;
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+@media (max-width: 700px) {
+  .notify {
+    bottom: 16px;
+    right: 8px;
+    font-size: 0.98rem;
+    padding: 8px 12px 8px 10px;
   }
 }
