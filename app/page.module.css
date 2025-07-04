@@ -1,0 +1,473 @@
+:root {
+  --font-main: 'Poppins', 'Montserrat', 'Inter', Arial, sans-serif;
+}
+
+.page {
+  background: #000;
+  color: #fff;
+  min-height: 100vh;
+  font-family: 'Poppins', 'Montserrat', 'Inter', Arial, sans-serif;
+}
+
+.benefit strong,
+.ctaButton,
+.footer {
+  font-family: var(--font-main);
+}
+
+.benefit p,
+.benefit,
+.footer p,
+.testimonials,
+.testimonialsCards,
+.testimonialsCard,
+.testimonialsCard p {
+  font-family: var(--font-main);
+  font-weight: 400;
+  letter-spacing: 0.2px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 5vw 0 5vw;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+}
+
+.logoText {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: #ff7a00;
+  letter-spacing: 2px;
+  text-shadow: 0 2px 16px #ff7a0033;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+
+.nav a:hover {
+  color: #ff7a00;
+}
+
+.banner {
+  width: 100vw;
+  height: 700px;
+  max-height: 900px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.banner img,
+.banner :global(img) {
+  object-fit: cover;
+  width: 100vw;
+  height: 100%;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+.bannerContent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 5vw;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.bannerBox {
+  color: #fff;
+  text-shadow: 2px 2px 8px #000;
+  max-width: 600px;
+  pointer-events: auto;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+.bannerBox h1,
+.bannerBox p,
+.bannerBox a,
+.usersInfo span {
+  color: #fff !important;
+  text-shadow: 2px 2px 12px #000, 0 2px 8px #000a;
+}
+
+.bannerBox h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-bottom: 18px;
+  line-height: 1.1;
+}
+
+.bannerBox p {
+  font-size: 1.2rem;
+  margin-bottom: 28px;
+  color: #eee;
+}
+
+.ctaButton {
+  background: linear-gradient(90deg, #ff7a00 0%, #ffb347 100%);
+  color: #181818;
+  font-weight: 900;
+  padding: 18px 44px;
+  border-radius: 32px;
+  font-size: 1.18rem;
+  border: none;
+  box-shadow: 0 4px 24px #ff7a0033;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s, transform 0.15s;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.ctaButton:hover {
+  background: linear-gradient(90deg, #ffb347 0%, #ff7a00 100%);
+  color: #fff;
+  box-shadow: 0 8px 32px #ff7a0033;
+  transform: scale(1.04);
+}
+
+.usersInfo {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 8px;
+}
+
+.avatars {
+  display: flex;
+  align-items: center;
+}
+
+.avatars :global(img) {
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-left: -10px;
+  box-shadow: 0 2px 8px #0007;
+  background: #222;
+}
+
+.avatars :global(img):first-child {
+  margin-left: 0;
+}
+
+.usersInfo span {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.founders,
+.testimonials,
+.benefits {
+  background: transparent;
+  margin-bottom: 80px;
+  margin-top: 100px;
+}
+
+.founders h2,
+.testimonials h2,
+.benefits h2 {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 900;
+  margin-bottom: 48px;
+  letter-spacing: 1.5px;
+  text-align: center;
+}
+
+.foundersCards,
+.testimonialsCards {
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.founderCard,
+.testimonialCard,
+.benefit {
+  background: #181818;
+  border-radius: 24px;
+  box-shadow: 0 4px 32px #000a;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s, border 0.2s;
+  border: none;
+  padding: 32px 28px 28px 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 260px;
+  min-height: 200px;
+}
+
+.founderCard:hover,
+.testimonialCard:hover,
+.benefit:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 12px 40px #ffd60044;
+  border: 1.5px solid #FFD600;
+}
+
+.founderCard img,
+.founderCard :global(img),
+.testimonialCard img,
+.testimonialCard :global(img) {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 18px;
+}
+
+.founderCard div,
+.testimonialCard div {
+  padding: 0;
+}
+
+.founderCard strong,
+.testimonialCard strong {
+  color: #FFD600;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+.founderCard p,
+.testimonialCard p {
+  color: #ccc;
+  font-size: 1.05rem;
+  margin-top: 8px;
+  line-height: 1.6;
+}
+
+.benefitsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  gap: 30px;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.benefit {
+  background: #181818;
+  border-radius: 18px;
+  border: 1.5px solid rgba(255, 122, 0, 0.18);
+  box-shadow: 0 6px 32px #000a;
+  padding: 24px 12px 18px 12px;
+  color: #fff;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 120px;
+  width: 180px;
+  max-width: 180px;
+  margin: 0;
+  justify-content: flex-start;
+  transition: box-shadow 0.2s, border 0.2s, transform 0.18s;
+  position: relative;
+}
+
+.benefit:hover {
+  box-shadow: 0 12px 40px #ff7a0033, 0 2px 8px #0008;
+  border: 1.5px solid #ff7a00;
+  transform: translateY(-6px) scale(1.03);
+}
+
+.benefitIcon {
+  font-size: 2.3rem;
+  color: #ff7a00;
+  margin-bottom: 18px;
+  display: block;
+  transition: color 0.2s, transform 0.18s;
+}
+
+.benefit:hover .benefitIcon {
+  color: #fff;
+  transform: scale(1.15) rotate(-8deg);
+}
+
+.benefit strong {
+  color: #ff7a00;
+  font-size: 1.18rem;
+  font-weight: 800;
+  display: block;
+  margin-bottom: 6px;
+  letter-spacing: 0.5px;
+}
+
+.benefit p {
+  color: #e0e0e0;
+  font-size: 1.01rem;
+  margin: 0;
+  font-weight: 400;
+}
+
+.footer {
+  width: 100vw;
+  padding: 48px 5vw 36px 5vw;
+  background: #000;
+  color: #fff;
+  text-align: center;
+  font-size: 1.15rem;
+  border-top: 1px solid #232323;
+  margin-top: 80px;
+  letter-spacing: 0.5px;
+}
+
+.footer p {
+  margin: 0 0 8px 0;
+  color: #ccc;
+}
+
+.bannerFavicon {
+  position: absolute;
+  top: 18px;
+  right: 32px;
+  width: 32px;
+  height: 32px;
+  z-index: 10;
+}
+
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@media (max-width: 1200px) {
+  .bannerContent {
+    padding: 0 2vw;
+  }
+
+  .bannerBox {
+    align-items: flex-start;
+    padding: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  .bannerBox {
+    padding: 0;
+  }
+
+  .bannerBox h1 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .foundersCards,
+  .testimonialsCards {
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+  }
+
+  .founderCard,
+  .testimonialCard {
+    width: 95vw;
+    max-width: 360px;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefit {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 1100px) {
+  .benefitsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .founders,
+  .testimonials,
+  .benefits,
+  .footer {
+    padding-left: 2vw;
+    padding-right: 2vw;
+  }
+
+  .founders h2,
+  .testimonials h2,
+  .benefits h2 {
+    font-size: 1.4rem;
+  }
+
+  .benefitsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+.title {
+  font-family: 'Poppins', 'Montserrat', 'Inter', Arial, sans-serif;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  font-size: 2.4rem;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.subtitle {
+  font-family: 'Poppins', 'Montserrat', 'Inter', Arial, sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #e0e0e0;
+}
