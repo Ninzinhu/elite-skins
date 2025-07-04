@@ -663,18 +663,29 @@
   pointer-events: none;
 }
 
+.logoBannerCenter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  pointer-events: none;
+}
+
 .logoBanner {
-  width: 80px !important;
-  height: 80px !important;
-  max-width: 80px;
-  max-height: 80px;
-  min-width: 40px;
-  min-height: 40px;
+  width: 330px !important;
+  height: 330px !important;
+  max-width: 330px;
+  max-height: 330px;
+  min-width: 130px;
+  min-height: 130px;
   display: block;
   pointer-events: auto;
   object-fit: contain;
-  position: relative;
-  z-index: 1;
   animation: pulseLogo 2.8s ease-in-out infinite;
 }
 

@@ -204,15 +204,6 @@ export default function Home() {
         )}
         {/* Banner */}
         <section className={styles.banner}>
-          <div className={styles.logoBannerWrapper}>
-            <Image
-              src="/logo.png"
-              alt="Logo EliteSkins"
-              width={80}
-              height={80}
-              className={styles.logoBanner}
-            />
-          </div>
           <Image
             src="/banner-cs2.png"
             alt="Banner EliteSkins"
@@ -220,6 +211,15 @@ export default function Home() {
             style={{ objectFit: "cover" }}
             priority
           />
+          <div className={styles.logoBannerCenter}>
+            <Image
+              src="/logo.png"
+              alt="Logo EliteSkins"
+              width={120}
+              height={120}
+              className={styles.logoBanner}
+            />
+          </div>
           <div className={styles.bannerContentDesktop}>
             <div className={styles.bannerBox}>
               <h1 className={styles.title}>
