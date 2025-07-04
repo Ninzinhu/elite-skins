@@ -6,7 +6,8 @@ import { loadFull } from "tsparticles";
 import styles from "./page.module.css";
 
 export default function Home() {
-  const particlesInit = useCallback(async (engine: any) => {
+  const particlesInit = useCallback(async (engine: unknown) => {
+    // @ts-expect-error: O tipo de engine é fornecido pela lib em tempo de execução
     await loadFull(engine);
   }, []);
 
